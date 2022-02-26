@@ -9,7 +9,7 @@ const port = 3001
 app.use(cors({origin: '*'}))
 app.use(bodyParser.json())
 
-const mongoDbLink = 'mongodb+srv://kruger:test@todo.b8zjp.mongodb.net/todo_list?retryWrites=true&w=majority'
+const mongoDbLink = 'mongodb+srv://kruger:<examplePassword>@todo.b8zjp.mongodb.net/<DATABASENAME>?retryWrites=true&w=majority'
 mongoose.connect(mongoDbLink)
 
 const TodoModel = mongoose.model('Todo', new mongoose.Schema({title: String, is_done: Boolean}))
